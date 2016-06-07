@@ -30,14 +30,14 @@
 			el = document.getElementById('magic'),
 			word_counter = 0,
 			character_counter = 0;
-
-
+			
 		function updateText()
 		{
-			if(word_counter[character_counter] != ''){
+			if(words[word_counter][character_counter] != ' '){
 			el.innerHTML = el.innerHTML+words[word_counter][character_counter++]; 
 		}else{
-			word_counter[character_counter] = '&nbsp';
+			el.innerHTML = el.innerHTML + '&nbsp';
+			character_counter++;
 		}
 
 			if(character_counter === words[word_counter].length+1)
