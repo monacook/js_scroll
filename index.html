@@ -34,7 +34,11 @@
 
 		function updateText()
 		{
+			if(word_counter[character_counter] != ''){
 			el.innerHTML = el.innerHTML+words[word_counter][character_counter++]; 
+		}else{
+			word_counter[character_counter] = '&nbsp';
+		}
 
 			if(character_counter === words[word_counter].length+1)
 
@@ -51,7 +55,7 @@
 			}
 		}
 
-		setInterval(updateText, 900);
+		setInterval(updateText, 200);
 
 	</script>
 
